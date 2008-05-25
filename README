@@ -7,6 +7,13 @@ This extension is available as a gem via GitHub:
 
     $ sudo gem install samsouder-titlecase --source=http://gems.github.com
 
+Usage:
+
+    require 'rubygems'
+    require 'titlecase'
+    
+    puts "this is a test".titlecase
+
 Derived from the rules set by John Gruber at <http://daringfireball.net/2008/05/title_case>. I also derived my test cases from his set. If you find any edge cases, please feel free to add them to the examples.yaml file.
 
 Rules from John Gruber:
