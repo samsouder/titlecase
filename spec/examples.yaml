@@ -41,3 +41,5 @@ should_pass:
     expect:  | I End in a Period.
   - example: | this is a test.com!?
     expect:  | This Is a test.com!?
+  - example: | 
+    expect:  | 

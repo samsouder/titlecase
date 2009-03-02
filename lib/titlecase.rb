@@ -9,8 +9,8 @@ class String
       word
     end
     # capitalize first and last words
-    x.first.smart_capitalize!
-    x.last.smart_capitalize!
+    x.first.to_s.smart_capitalize!
+    x.last.to_s.smart_capitalize!
     # small words after colons are capitalized
     x.join(" ").gsub(/:\s?(\W*#{small_words.join("|")}\W*)\s/) { ": #{$1.smart_capitalize} " }
   end
