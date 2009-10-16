@@ -15,6 +15,10 @@ class String
     x.join(" ").gsub(/:\s?(\W*#{small_words.join("|")}\W*)\s/) { ": #{$1.smart_capitalize} " }
   end
   
+  def titlecase!
+    replace(titlecase)
+  end
+  
   def smart_capitalize
     # ignore any leading crazy characters and capitalize the first real character
     if self =~ /^['"\(\[']*([a-z])/

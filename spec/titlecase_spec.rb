@@ -10,4 +10,11 @@ describe String do
       end
     end
   end
+  
+  # Ensure the self-modifying version works correctly
+  it "should self-modify the original value in place" do
+    string = 'a complex thing'
+    string.titlecase!
+    string.should == 'A Complex Thing'
+  end
 end
