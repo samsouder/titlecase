@@ -6,7 +6,7 @@ describe String do
     examples = YAML.load(file)
     examples["should_pass"].each do |e|
       it "should be the expected value (#{e["expect"]})" do
-        e["example"].titlecase.should == e["expect"]
+        expect(e["example"].titlecase).to eq(e["expect"])
       end
     end
   end
@@ -15,6 +15,6 @@ describe String do
   it "should self-modify the original value in place" do
     string = 'a complex thing'
     string.titlecase!
-    string.should == 'A Complex Thing'
+    expect(string).to eq('A Complex Thing')
   end
 end
